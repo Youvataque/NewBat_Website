@@ -6,7 +6,7 @@ import NavBar from './Components/FondamentalAppComp/NavBarComp/Navbar'
 
 function App() {
   return (
-    <div className='bg-backGround'>
+    <div className='w-screen bg-backGround'>
       <NavBar/>
       <Routes>
         <Route path='/' element={<Home />} />
