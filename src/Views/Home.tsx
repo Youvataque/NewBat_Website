@@ -9,10 +9,10 @@ const Home:React.FC = () => {
                 <div className="w-full h-[30%] bg-backGround "></div>
             </div>
             <div className="absolute w-full flex flex-col justify-center items-center top-20">
-                <h1 className="pt-3 pb-3 font-bold text-3xl text-backGround text-center">NewBat : L'informatique pour le batiment</h1>
+                <h1 className="pt-3 pb-3 font-bold text-3xl text-backGround text-center">NewBat : L'informatique du batiment</h1>
                 <h2 className="w-2/4 max-md:w-[97%] font-medium text-xl text-backGround text-center pb-14">Ne vous est il jamais arrivé de livrer un compte rendu d'intervention douteux au client ? D'avoir du mal à mener vos salariés la ou vous le souhaitiez ? De prendre les notes d'un devis puis de perdre la feuille ? Avec NewBat tout cela est terminé !</h2>
                 <iframe 
-                    className="w-250 h-180 max-2xl:w-200 max-2xl:h-130 max-lg:w-180 max-lg:h-100 max-md:w-85 max-md:h-54 rounded-2xl"
+                    className="w-250 h-180 max-2xl:w-200 max-2xl:h-130 max-xl:w-180 max-xl:h-100 max-md:w-85 max-md:h-54 rounded-2xl"
                     src="https://www.youtube.com/embed/z0gpEHgiw-M"
                 />
             </div>
@@ -21,9 +21,7 @@ const Home:React.FC = () => {
 
     return <div className="flex flex-col items-center">
         {videoZone()}
-        {Array.from({ length: 20 }, (_, index) => (
-        <div className="h-32 w-32 bg-Secondary pb-12" key={index}>Div {index + 1}</div>
-      ))}
+        
     </div>
 }
 

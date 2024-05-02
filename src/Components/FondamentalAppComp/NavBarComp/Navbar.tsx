@@ -41,7 +41,7 @@ const NavBar = () => {
     /////////////////////////////////////////////////////////////////
     // règle la hauteur de changement de couleur
     function switchCol(change:boolean):number {
-        const tab = [768, 1450];
+        const tab = [768, 2000];
         const val = [600 *0.7, 900 *0.7];
         if (change) {
            for (let x = 0; x < tab.length; ++x) {

@@ -30,7 +30,7 @@ export default {
         '250' : '1300px'
       },
       screens: {
-        '2xl': '1450px'
+        '2xl': '2000px'
       }
     },
   },
