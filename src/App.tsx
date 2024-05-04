@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router'
 import Home from './Views/Home'
 import Pricing from './Views/Pricing'
 import Contact from './Views/Contact'
-import NavBar from './Components/FondamentalAppComp/NavBarComp/Navbar'
+import NavBar from './Components/FondamentalAppComp/Navbar.tsx'
 
 function App() {
   return (
