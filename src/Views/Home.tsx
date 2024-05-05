@@ -1,6 +1,6 @@
-import interGif from '../../assets/Img/InterventionF.gif';
-import chantierGif from '../../assets/Img/ChantierF.gif';
-import deviGif from '../../assets/Img/DevisF.gif';
+import interGif from '../../assets/Img/Intervention.gif';
+import chantierGif from '../../assets/Img/Chantier.gif';
+import deviGif from '../../assets/Img/Devis.gif';
 import GifPresentator from '../Components/Features/ViewsTemplates/GifPresentator';
 
 const Home:React.FC = () => {
@@ -16,7 +16,12 @@ const Home:React.FC = () => {
         ],
         gifs : [interGif, chantierGif, deviGif],
         bgColors : ["bg-App1", "bg-App2", "bg-App3"],
-        textColors : ["text-App1", "text-App2", "text-App3"]
+        textColors : ["text-App1", "text-App2", "text-App3"],
+        buttonColors : [
+            "bg-App1 text-backGround rounded-md hover:bg-backGround border hover:border-solid hover:border-App1 hover:text-App1",
+            "bg-App2 text-backGround rounded-md hover:bg-backGround hover:border-solid hover:border-App2 hover:text-App2",
+            "bg-App3 text-backGround rounded-md hover:bg-backGround hover:border-solid hover:border-App3 hover:text-App3"
+        ]
     }
 
     /////////////////////////////////////////////////////////////////
@@ -52,7 +57,7 @@ const Home:React.FC = () => {
         return <div className="w-screen flex flex-col justify-center items-center pt-14 max-2xl:pt-20 max-md:pt-0">
             {titleEl("Une démonstration ?", "text-Primary")}
             {textEl("Voici un petit aperçu de ce que propose notre solution. Gagnez en organisation et en temps grâce à NewBat !", "text-Secondary")}
-            <GifPresentator gifs={gifData.gifs} titles={gifData.titles} texts={gifData.texts} bgColors={gifData.bgColors} textColors={gifData.textColors}/>
+            <GifPresentator gifs={gifData.gifs} titles={gifData.titles} texts={gifData.texts} bgColors={gifData.bgColors} textColors={gifData.textColors} buttonColors={gifData.buttonColors}/>
         </div>
     }
 
