@@ -53,6 +53,8 @@ const Home:React.FC = () => {
         </div>
     }
 
+    /////////////////////////////////////////////////////////////////
+    // partie 2 zone de présentation des gifs
     function presZone() {
         return <div className="w-screen flex flex-col justify-center items-center pt-14 max-2xl:pt-20 max-md:pt-0">
             {titleEl("Une démonstration ?", "text-Primary")}
@@ -61,9 +63,23 @@ const Home:React.FC = () => {
         </div>
     }
 
+    /////////////////////////////////////////////////////////////////
+    // partie3 zone des questions
+    function askZone() {
+        return <div className='w-screen flex flex-col justify-center items-center'>
+            {titleEl("Des questions", "text-Primary")}
+            {textEl("Retrouvez ce dessous les question les plus posés mais en cas de doute n'hésitez pas à nous contacter.", "text-Secondary")}
+        </div>
+    }
+
+    /////////////////////////////////////////////////////////////////
+    // code principale
     return <div className="flex flex-col items-center w-screen">
         {videoZone()}
+        <div className='h-10'/>
         {presZone()}
+        <div className='h-10'/>
+        {askZone()}
         
     </div>
 }
