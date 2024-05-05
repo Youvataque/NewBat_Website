@@ -1,6 +1,6 @@
-import interGif from '../../assets/Img/Intervention.gif';
-import chantierGif from '../../assets/Img/Chantier.gif';
-import deviGif from '../../assets/Img/Devis.gif';
+import interGif from '../../assets/Img/InterventionF.gif';
+import chantierGif from '../../assets/Img/ChantierF.gif';
+import deviGif from '../../assets/Img/DevisF.gif';
 import GifPresentator from '../Components/Features/ViewsTemplates/GifPresentator';
 
 const Home:React.FC = () => {
@@ -9,7 +9,11 @@ const Home:React.FC = () => {
     // information de la presZone
     const gifData = {
         titles : ["Intervention", "Chantier", "Devis"],
-        texts : ["description1", "description2", "description3"],
+        texts : [
+            "Première application de la suite, celle-ci vous permet de gérer éfficacements vos entretiens de climatisation et de pompe à chaleur. Entrez toutes les informations des les encarts prévus, validez les check-up, n'oubliez rien sans avoir à y penser ! Vous pouvez maintenant rendre un compte rendu propre, professionel, et détaillé à votre client par message ou email.",
+            "L'organisation est l'élément primordiale de toute entreprise éfficace. Gardez un oeil attentif sur vos chantiers en cours grace à notre outil. Vous pourrez mettre en place pour chacun de vos sites des taches à accomplir, une liste de matériaux à acheter, assigner des chantiers à certains ouvrier, et enfin rester informé des difficultés rencontrés par vos salariés ! ",
+            "Nous vous proposons une application directement connecté à votre base de client permettant de prendre toutes les informations sur le terrain rapidement. Un schéma ? Une longue liste de travaux ? Des détails à préciser ? Tout peut être enregistré de façon clair et concise. Vous n'aurrez plus qu'à faire \"copier coller\" et votre devis sera pret (nous recommendons l'achat d'une tablette avec stylet pour un confort optimal)."
+        ],
         gifs : [interGif, chantierGif, deviGif],
         bgColors : ["bg-App1", "bg-App2", "bg-App3"],
         textColors : ["text-App1", "text-App2", "text-App3"]
@@ -45,7 +49,7 @@ const Home:React.FC = () => {
     }
 
     function presZone() {
-        return <div className="w-screen flex flex-col justify-center items-center pt-14 max-md:pt-0">
+        return <div className="w-screen flex flex-col justify-center items-center pt-14 max-2xl:pt-20 max-md:pt-0">
             {titleEl("Une démonstration ?", "text-Primary")}
             {textEl("Voici un petit aperçu de ce que propose notre solution. Gagnez en organisation et en temps grâce à NewBat !", "text-Secondary")}
             <GifPresentator gifs={gifData.gifs} titles={gifData.titles} texts={gifData.texts} bgColors={gifData.bgColors} textColors={gifData.textColors}/>
