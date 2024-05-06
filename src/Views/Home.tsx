@@ -3,6 +3,7 @@ import chantierGif from '../../assets/Img/Chantier.gif';
 import deviGif from '../../assets/Img/Devis.gif';
 import GifPresentator from '../Components/Features/ViewsTemplates/GifPresentator';
 import AskTemplate from '@/Components/Features/ViewsTemplates/AskTemplate';
+import Footer from '@/Components/FondamentalAppComp/Footer';
 
 const Home:React.FC = () => {
 
@@ -85,7 +86,7 @@ const Home:React.FC = () => {
     // partie3 zone des questions
     function askZone() {
         return <div className='w-screen flex flex-col justify-center items-center'>
-            {titleEl("Des questions", "text-Primary")}
+            {titleEl("Des questions ?", "text-Primary")}
             {textEl("Retrouvez ce dessous les question les plus posés sur notre solution mais en cas de doute n'hésitez pas à nous contacter.", "text-Secondary")}
             <AskTemplate titles={askData.titles} content={askData.content}/>
         </div>
@@ -99,7 +100,8 @@ const Home:React.FC = () => {
         {presZone()}
         <div className='h-20'/>
         {askZone()}
-        
+        <div className='h-40'/>
+        <Footer/>
     </div>
 }
 
