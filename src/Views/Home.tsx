@@ -2,6 +2,7 @@ import interGif from '../../assets/Img/Intervention.gif';
 import chantierGif from '../../assets/Img/Chantier.gif';
 import deviGif from '../../assets/Img/Devis.gif';
 import GifPresentator from '../Components/Features/ViewsTemplates/GifPresentator';
+import AskTemplate from '@/Components/Features/ViewsTemplates/AskTemplate';
 
 const Home:React.FC = () => {
 
@@ -19,8 +20,25 @@ const Home:React.FC = () => {
         textColors : ["text-App1", "text-App2", "text-App3"],
         buttonColors : [
             "bg-App1 text-backGround rounded-md hover:bg-backGround border hover:border-solid hover:border-App1 hover:text-App1",
-            "bg-App2 text-backGround rounded-md hover:bg-backGround hover:border-solid hover:border-App2 hover:text-App2",
-            "bg-App3 text-backGround rounded-md hover:bg-backGround hover:border-solid hover:border-App3 hover:text-App3"
+            "bg-App2 text-backGround rounded-md hover:bg-backGround border hover:border-solid hover:border-App2 hover:text-App2",
+            "bg-App3 text-backGround rounded-md hover:bg-backGround border hover:border-solid hover:border-App3 hover:text-App3"
+        ]
+    }
+
+    /////////////////////////////////////////////////////////////////
+    // information de la askZone
+    const askData = {
+        titles : [
+            "Et si je n'ai pas internet ?",
+            "J'ai un Samsung ça fonctionne quand même ?",
+            "J'ai vraiment besoin d'un tablette pour Devis ?",
+            "Sommes-nous prévenu à l'anniversaire des entretiens ?"
+        ],
+        content : [
+            "C'est là que cela devient fantastique. Nos applications sauvegarderont toutes les données sur votre téléphone en attendant de retrouver du réseau, puis les enverront automatiquement sur le serveur.",
+            "Bien sur. Nos produits sont dotés d'une technologie puissante les rendants compatibles partout ! De Windows à Mac en passant par Android et Ios tout fonctionne.",
+            "Non la tablette n'est pas obligatoire, vous pouvez tout à fait dessiner au doigt ou bien vous passer de schéma. Celle-ci permettra de pousser l'application au mieux de ce qu'elle propose.",
+            "Malheureusement, Intervention n'offre pas encore de fonctionnalité permettant de prévenir le client ou vous-même qu'un entretien du matériel est nécessaire. Nous travaillons actuellement à développer cette fonctionnalité."
         ]
     }
 
@@ -68,7 +86,8 @@ const Home:React.FC = () => {
     function askZone() {
         return <div className='w-screen flex flex-col justify-center items-center'>
             {titleEl("Des questions", "text-Primary")}
-            {textEl("Retrouvez ce dessous les question les plus posés mais en cas de doute n'hésitez pas à nous contacter.", "text-Secondary")}
+            {textEl("Retrouvez ce dessous les question les plus posés sur notre solution mais en cas de doute n'hésitez pas à nous contacter.", "text-Secondary")}
+            <AskTemplate titles={askData.titles} content={askData.content}/>
         </div>
     }
 
@@ -78,7 +97,7 @@ const Home:React.FC = () => {
         {videoZone()}
         <div className='h-10'/>
         {presZone()}
-        <div className='h-10'/>
+        <div className='h-20'/>
         {askZone()}
         
     </div>
