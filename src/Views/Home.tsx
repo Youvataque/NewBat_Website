@@ -49,7 +49,7 @@ const Home:React.FC = () => {
     }
 
     function textEl(text:string, style:string) {
-        return <h2 className={`w-2/4 max-md:w-[97%] font-medium text-xl text-center pb-14 ${style}`}>{text}</h2>
+        return <h2 className={`w-2/4 max-md:w-[97%] font-light text-xl max-2xl:text-lg max-md:text-sm text-center pb-14 ${style}`}>{text}</h2>
     }
 
     /////////////////////////////////////////////////////////////////

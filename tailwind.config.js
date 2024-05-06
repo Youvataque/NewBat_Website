@@ -46,6 +46,7 @@ export default {
         '4xl' : '43px'
       },
       fontSize : {
+        '3.5xl' : '35px',
         '4xl' : '45px'
       },
       keyframes: {
