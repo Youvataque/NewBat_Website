@@ -16,15 +16,15 @@ interface AskProps {
 // composant générant des question animés
 const AskTemplate:React.FC<AskProps> = ({titles, content}) => {
     return (
-        <Accordion type="single" collapsible className="w-1/3">
-        {titles.map((value, index) => {
-            return <AccordionItem value={`item-${index + 1}`}>
-            <AccordionTrigger>{value}</AccordionTrigger>
-            <AccordionContent>
-                {content[index]}
-            </AccordionContent>
-            </AccordionItem>
-        })}
+        <Accordion type="single" collapsible className="w-1/2 max-2xl:w-[55%] max-md:w-[90%]">
+            {titles.map((value, index) => {
+                return <AccordionItem value={`item-${index + 1}`}>
+                <AccordionTrigger className="text-Secondary font-semibold text-lg text-start">{value}</AccordionTrigger>
+                <AccordionContent className="font-medium">
+                    {content[index]}
+                </AccordionContent>
+                </AccordionItem>
+            })}
         </Accordion>
     )
 }

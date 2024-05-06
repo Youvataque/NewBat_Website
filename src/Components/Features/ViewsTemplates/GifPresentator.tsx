@@ -27,8 +27,8 @@ const GifPresentator:React.FC<ElementProps> = ({gifs, titles, texts, bgColors, t
     function textEl(text:string, title:string, index:number) {
         return <div className={`h-160 max-2xl:h-150 max-md:h-96 flex flex-col justify-center max-md:items-center w-130 max-2xl:w-110 max-md:w-full`}>
             <h2 className={`font-semibold text-3xl max-md:text-2xl ${textColors[index]} max-md:text-center mb-2 max-md:mb-0`}>{title}</h2>
-            <p className={`font-medium text-lg max-md:text-sm max-md:text-center`}>{text}</p>
-            <button className={`h-12 w-36 mt-10 max-md:mt-6 rounded-md ${buttonColors[index]} `}>Informations</button>
+            <p className={`font-medium text-lg max-md:text-xs max-md:text-center`}>{text}</p>
+            <button className={`h-12 w-36 mt-10 max-md:h-10 max-md:mt-6 rounded-md ${buttonColors[index]} `}>Informations</button>
         </div>
     }
 
