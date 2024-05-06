@@ -98,7 +98,7 @@ const NavBar = () => {
     /////////////////////////////////////////////////////////////////
     // code principale
     return (
-        <div className={`w-screen h-16 bg-opacity-50 fixed top-0 flex items-center justify-between backdrop-blur-md z-10 ${isScrolled? "border border-solid border-gray transition-all duration-200 ease-in-out" : ""}`} ref={ref}>
+        <div className={`w-screen h-16 bg-opacity-50 fixed top-0 flex items-center justify-between backdrop-blur-md z-10 ${isScrolled? "border border-solid border-gray-300 transition-all duration-200 ease-in-out" : ""}`} ref={ref}>
         {title()}
         {links()}
         </div>
