@@ -1,4 +1,7 @@
 /////////////////////////////////////////////////////////////////
+
+import InfoDrawer from "./InfoDrawer"
+
 // args du composant
 interface ElementProps {
     gifs:string[],
@@ -6,12 +9,14 @@ interface ElementProps {
     texts:string[],
     bgColors:string[],
     textColors:string[],
-    buttonColors:string[]
+    buttonColors:string[],
+    drawerColors:string[],
+    infosPoints:Array<string[]>
 }
 
 /////////////////////////////////////////////////////////////////
 // composant générant des pages de rpésentation pour gif
-const GifPresentator:React.FC<ElementProps> = ({gifs, titles, texts, bgColors, textColors, buttonColors}) => {
+const GifPresentator:React.FC<ElementProps> = ({gifs, titles, texts, bgColors, textColors, buttonColors, drawerColors, infosPoints}) => {
 
     /////////////////////////////////////////////////////////////////
     // partie gif
@@ -28,7 +33,7 @@ const GifPresentator:React.FC<ElementProps> = ({gifs, titles, texts, bgColors, t
         return <div className={`h-160 max-2xl:h-150 max-md:h-96 flex flex-col justify-center max-md:items-center w-130 max-2xl:w-110 max-md:w-full`}>
             <h2 className={`font-semibold text-3.5xl max-md:text-2xl ${textColors[index]} max-md:text-center mb-2`}>{title}</h2>
             <p className={`text-lg font-light max-md:text-xs max-md:text-center`}>{text}</p>
-            <button className={`h-12 w-36 mt-10 max-md:h-10 max-md:mt-6 rounded-md font-semibold ${buttonColors[index]} `}>Informations</button>
+            <InfoDrawer buttonColor={buttonColors[index]} drawerStyle={drawerColors[index]} infoPoint={infosPoints[index]}/>
         </div>
     }
 

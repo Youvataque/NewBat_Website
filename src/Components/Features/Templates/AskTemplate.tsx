@@ -19,10 +19,8 @@ const AskTemplate:React.FC<AskProps> = ({titles, content}) => {
         <Accordion type="single" collapsible className="w-1/2 max-2xl:w-[55%] max-md:w-[90%]">
             {titles.map((value, index) => {
                 return <AccordionItem value={`item-${index + 1}`}>
-                <AccordionTrigger className="text-Secondary font-semibold text-lg text-start">{value}</AccordionTrigger>
-                <AccordionContent className="font-medium">
-                    {content[index]}
-                </AccordionContent>
+                <AccordionTrigger className="text-Secondary font-semibold text-lg max-md:text-md text-start">{value}</AccordionTrigger>
+                <AccordionContent className="font-medium text-md max-md:text-sm">{content[index]}</AccordionContent>
                 </AccordionItem>
             })}
         </Accordion>

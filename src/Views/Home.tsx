@@ -1,8 +1,8 @@
 import interGif from '../../assets/Img/Intervention.gif';
 import chantierGif from '../../assets/Img/Chantier.gif';
 import deviGif from '../../assets/Img/Devis.gif';
-import GifPresentator from '../Components/Features/ViewsTemplates/GifPresentator';
-import AskTemplate from '@/Components/Features/ViewsTemplates/AskTemplate';
+import GifPresentator from '../Components/Features/Templates/GifPresentator';
+import AskTemplate from '@/Components/Features/Templates/AskTemplate';
 import Footer from '@/Components/FondamentalAppComp/Footer';
 
 const Home:React.FC = () => {
@@ -23,6 +23,16 @@ const Home:React.FC = () => {
             "bg-App1 text-backGround rounded-md hover:bg-backGround border hover:border-solid hover:border-App1 hover:text-App1",
             "bg-App2 text-backGround rounded-md hover:bg-backGround border hover:border-solid hover:border-App2 hover:text-App2",
             "bg-App3 text-backGround rounded-md hover:bg-backGround border hover:border-solid hover:border-App3 hover:text-App3"
+        ],
+        drawerStyles : [
+            "bg-[#B9CCED]",
+            "bg-[#FCC590]",
+            "bg-[#B0D9B1]"
+        ],
+        infosPoints : [
+            ["Always on, fonctionne en ligne comme hors ligne.", "Fast entry, vos informations sont pré-rentrées et vos fiches toujours à jour.", "Shareable, chaque interventions est partageable par sms ou mail au format pdf", "Easy use, vos salariés ne pourront plus faire d'erreur."],
+            ["Always on, fonctionne en ligne comme hors ligne.", "Never forget, établissez votre liste d'achats, vos tâches ou le suivi de l'avancement pour chaque chantier.", "Collaborative, avancez sur vos taches en équipe grâce au partage instantané."],
+            ["Always on, fonctionne en ligne comme hors ligne.", "Refreshing, ne passez plus vos soirées à traiter des devis grâce à la clarté des infos prises.", "Always here, ayez toujours sur vous l'outil pour accomplir le meilleur travail possible."]
         ]
     }
 
@@ -33,20 +43,22 @@ const Home:React.FC = () => {
             "Et si je n'ai pas internet ?",
             "J'ai un Samsung ça fonctionne quand même ?",
             "J'ai vraiment besoin d'un tablette pour Devis ?",
-            "Sommes-nous prévenu à l'anniversaire des entretiens ?"
+            "Sommes-nous prévenu à l'anniversaire des entretiens ?",
+            "Il est ou le chantier ?"
         ],
         content : [
             "C'est là que cela devient fantastique. Nos applications sauvegarderont toutes les données sur votre téléphone en attendant de retrouver du réseau, puis les enverront automatiquement sur le serveur.",
-            "Bien sur. Nos produits sont dotés d'une technologie puissante les rendants compatibles partout ! De Windows à Mac en passant par Android et Ios tout fonctionne.",
+            "Bien sur. Nos produits sont dotés d'une technologie puissante les rendants compatibles partout ! De Windows à Mac en passant par Android et iOS tout fonctionne.",
             "Non la tablette n'est pas obligatoire, vous pouvez tout à fait dessiner au doigt ou bien vous passer de schéma. Celle-ci permettra de pousser l'application au mieux de ce qu'elle propose.",
-            "Malheureusement, Intervention n'offre pas encore de fonctionnalité permettant de prévenir le client ou vous-même qu'un entretien du matériel est nécessaire. Nous travaillons actuellement à développer cette fonctionnalité."
+            "Malheureusement, Intervention n'offre pas encore de fonctionnalité permettant de prévenir le client ou vous-même qu'un entretien du matériel est nécessaire. Nous travaillons actuellement à développer cette fonctionnalité.",
+            "Regardes sur ton application ! Investir dans l'informatique c'est se libérer l'esprit."
         ]
     }
 
     /////////////////////////////////////////////////////////////////
     // composant de titre
     function titleEl(title:string, style:string) {
-        return <h1 className={`pt-3 pb-0 font-bold text-4xl max-md:text-3xl text-center ${style}`}>{title}</h1>
+        return <h1 className={`pt-3 pb-0 font-bold text-4xl max-md:text-3xl text-center w-[97%] ${style}`}>{title}</h1>
     }
 
     function textEl(text:string, style:string) {
@@ -57,11 +69,11 @@ const Home:React.FC = () => {
     // partie1 de home avec la description courte et la vidéo
     function videoZone() {
         return <div className="relative">
-            <div className="w-screen h-210 max-2xl:h-180 max-md:h-160">
-                <div className="w-full h-[80%] bg-Primary "></div>
-                <div className="w-full h-[20%] bg-backGround "></div>
+            <div className="w-screen h-210 max-2xl:h-180 max-md:h-140">
+                <div className="w-full h-[80%]  bg-Primary "></div>
+                <div className="w-full h-[20%]  bg-backGround "></div>
             </div>
-            <div className="absolute w-full flex flex-col justify-center items-center top-20">
+            <div className="absolute w-full flex flex-col justify-center items-center bottom-0">
                 {titleEl("NewBat : L'informatique du batiment", "text-backGround")}
                 {textEl("Ne vous est il jamais arrivé de livrer un compte rendu d'intervention douteux au client ? D'avoir du mal à mener vos salariés la ou vous le souhaitiez ? De prendre les notes d'un devis puis de perdre la feuille ? Avec NewBat tout cela est terminé !", "text-backGround")}
                 <iframe 
@@ -78,7 +90,16 @@ const Home:React.FC = () => {
         return <div className="w-screen flex flex-col justify-center items-center pt-14 max-2xl:pt-20 max-md:pt-0">
             {titleEl("Une démonstration ?", "text-Primary")}
             {textEl("Voici un petit aperçu de ce que propose notre solution. Gagnez en organisation et en temps grâce à NewBat !", "text-Secondary")}
-            <GifPresentator gifs={gifData.gifs} titles={gifData.titles} texts={gifData.texts} bgColors={gifData.bgColors} textColors={gifData.textColors} buttonColors={gifData.buttonColors}/>
+            <GifPresentator
+                gifs={gifData.gifs} 
+                titles={gifData.titles}
+                texts={gifData.texts}
+                bgColors={gifData.bgColors}
+                textColors={gifData.textColors}
+                buttonColors={gifData.buttonColors}
+                drawerColors={gifData.drawerStyles}
+                infosPoints={gifData.infosPoints}
+            />
         </div>
     }
 
@@ -100,7 +121,7 @@ const Home:React.FC = () => {
         {presZone()}
         <div className='h-20'/>
         {askZone()}
-        <div className='h-40'/>
+        <div className='h-40 max-md:h-20'/>
         <Footer/>
     </div>
 }
