@@ -8,14 +8,18 @@ export default {
     extend: {
       colors: {
         'backGround' : "#F4FAFF",
+        'notBackGround' : "#E6F4FE",
+        'borderColor' : "#8EC8F6",
         'Primary' : "#0D74CE",
         'Secondary' : "#113264",
+        'Tertiary' : "#0588F0",
         'App1' : '#256EB4',
         'App2' : '#F29235',
         'App3' : '#52C848'
       },
       height: {
         '54' : '216px',
+        '68' : '270px',
         '100' : '400px',
         '110' : '450px',
         '130' : '510px',

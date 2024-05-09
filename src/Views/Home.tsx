@@ -1,9 +1,12 @@
 import interGif from '../../assets/Img/Intervention.gif';
 import chantierGif from '../../assets/Img/Chantier.gif';
 import deviGif from '../../assets/Img/Devis.gif';
-import GifPresentator from '../Components/Features/Templates/GifPresentator';
+import GifPresentator from '../Components/Features/ViewsTemplates/GifPresentator';
 import AskTemplate from '@/Components/Features/Templates/AskTemplate';
 import Footer from '@/Components/FondamentalAppComp/Footer';
+import ViewText from '@/Components/Features/Templates/ViewText';
+import ViewTitle from '@/Components/Features/Templates/ViewTitle';
+import MainText from '@/Components/Features/Templates/MainText';
 
 const Home:React.FC = () => {
 
@@ -56,26 +59,22 @@ const Home:React.FC = () => {
     }
 
     /////////////////////////////////////////////////////////////////
-    // composant de titre
-    function titleEl(title:string, style:string) {
-        return <h1 className={`pt-3 pb-0 font-bold text-4xl max-md:text-3xl text-center w-[97%] ${style}`}>{title}</h1>
-    }
-
-    function textEl(text:string, style:string) {
-        return <h2 className={`w-2/4 max-md:w-[97%] font-light text-xl max-2xl:text-lg max-md:text-sm text-center pb-14 ${style}`}>{text}</h2>
-    }
-
-    /////////////////////////////////////////////////////////////////
     // partie1 de home avec la description courte et la vidéo
     function videoZone() {
         return <div className="relative">
-            <div className="w-screen h-210 max-2xl:h-180 max-md:h-140">
+            <div className="w-screen h-210 max-2xl:h-190 max-xl:h-180 max-md:h-140">
                 <div className="w-full h-[80%]  bg-Primary "></div>
                 <div className="w-full h-[20%]  bg-backGround "></div>
             </div>
             <div className="absolute w-full flex flex-col justify-center items-center bottom-0">
-                {titleEl("NewBat : L'informatique du batiment", "text-backGround")}
-                {textEl("Ne vous est il jamais arrivé de livrer un compte rendu d'intervention douteux au client ? D'avoir du mal à mener vos salariés la ou vous le souhaitiez ? De prendre les notes d'un devis puis de perdre la feuille ? Avec NewBat tout cela est terminé !", "text-backGround")}
+                <ViewTitle
+                    title="NewBat : L'informatique du batiment"
+                    style="text-backGround"
+                />
+                <MainText 
+                    text="Ne vous est il jamais arrivé de livrer un compte rendu d'intervention douteux au client ? D'avoir du mal à mener vos salariés la ou vous le souhaitiez ? De prendre les notes d'un devis puis de perdre la feuille ? Avec NewBat tout cela est terminé !"
+                    style="text-backGround"
+                />
                 <iframe 
                     className="w-250 h-180 max-2xl:w-200 max-2xl:h-130 max-xl:w-180 max-xl:h-100 max-md:w-85 max-md:h-54 rounded-2xl"
                     src="https://www.youtube.com/embed/z0gpEHgiw-M"
@@ -88,8 +87,14 @@ const Home:React.FC = () => {
     // partie 2 zone de présentation des gifs
     function presZone() {
         return <div className="w-screen flex flex-col justify-center items-center pt-14 max-2xl:pt-20 max-md:pt-0">
-            {titleEl("Une démonstration ?", "text-Primary")}
-            {textEl("Voici un petit aperçu de ce que propose notre solution. Gagnez en organisation et en temps grâce à NewBat !", "text-Secondary")}
+            <ViewTitle
+                title="Une démonstration ?"
+                style="text-Primary"
+            />
+            <ViewText
+                text="Voici un petit aperçu de ce que propose notre solution. Gagnez en organisation et en temps grâce à NewBat !" 
+                style="text-Secondary"
+            />
             <GifPresentator
                 gifs={gifData.gifs} 
                 titles={gifData.titles}
@@ -107,8 +112,14 @@ const Home:React.FC = () => {
     // partie3 zone des questions
     function askZone() {
         return <div className='w-screen flex flex-col justify-center items-center'>
-            {titleEl("Des questions ?", "text-Primary")}
-            {textEl("Retrouvez ce dessous les question les plus posés sur notre solution mais en cas de doute n'hésitez pas à nous contacter.", "text-Secondary")}
+            <ViewTitle
+                title="Des questions ?"
+                style="text-Primary"
+            />
+            <ViewText
+                text="Retrouvez ce dessous les question les plus posés sur notre solution mais en cas de doute n'hésitez pas à nous contacter."
+                style="text-Secondary"
+            />
             <AskTemplate titles={askData.titles} content={askData.content}/>
         </div>
     }

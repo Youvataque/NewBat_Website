@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////
 
-import InfoDrawer from "./InfoDrawer"
+import InfoDrawer from "../Templates/InfoDrawer"
 
 // args du composant
 interface ElementProps {
@@ -22,7 +22,7 @@ const GifPresentator:React.FC<ElementProps> = ({gifs, titles, texts, bgColors, t
     // partie gif
     function imgEl(gif:string, index:number) {
         return <div className="relative h-160 w-130 max-2xl:h-150 max-2xl:w-110 flex justify-center max-md:w-full max-md:h-96">
-            <div className={`w-130 h-80 max-2xl:w-110 max-2xl:h-72 max-xl:w-96 max-xl:h-64 rounded-2xl mt-[50%] max-2xl:mt-[55%] max-xl:mt-[35%] ${bgColors[index]} max-md:hidden`}/>
+            <div className={`w-130 h-80 max-2xl:w-110 max-2xl:h-68 max-xl:w-96 max-xl:h-56 rounded-2xl mt-[50%] max-2xl:mt-[55%] max-xl:mt-[35%] ${bgColors[index]} max-md:hidden`}/>
             <img className="absolute h-160 max-2xl:h-150 max-xl:h-110 max-md:h-96 top-0" src={gif}/>
         </div>
     }
