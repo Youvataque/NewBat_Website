@@ -90,7 +90,6 @@ const NavBar = () => {
         <div className='flex items-center justify-center pr-[15%] max-md:pr-3'>
             {linkTemplate("Offres", '/pricing')}
             <div className='w-6' />
-            {linkTemplate("Contact", '/contact')}
         </div>
         );
     }
