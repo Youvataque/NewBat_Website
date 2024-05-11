@@ -12,19 +12,24 @@ const Pricing:React.FC = () => {
     const cardData = {
         titles : ["Starter", "Professional", "Premium"],
         sousTitles : [
-            "Entamez votre conversion au digital et facilitez vous la vie !",
-            "Augmentez votre productivité grâce à l'ajout du digital dans vos taches quotidienne.",
-            "Créez l'environnement numérique qui vous convient pour parfaire votre efficacité et votre confort."
+            "Entamez votre conversion au digital et simplifiez-vous la vie ! Tester le numérique, c’est l’adopter.",
+            "Augmentez votre productivité grâce à l'intégration du digital dans vos tâches quotidiennes.",
+            "Créez l'environnement numérique idéal pour parfaire votre efficacité et améliorer votre confort."
         ],
         prices : [
-            "69 €",
-            "149 €",
-            "3999 €"
+            "69€ / mois",
+            "149€ / mois",
+            "Sur devis"
         ],
         sousPrices : [
-            "Par mois ramené à l'année",
-            "Par mois ramené à l'année",
-            "Ajustable en fonction des besoins"
+            "puis 20€ par utilisateur supplémentaire",
+            "puis 15€ par utilisateur supplémentaire",
+            "Achat d'une licence comptant"
+        ],
+        checks : [
+            ["Accès à une application", "Un utilisateur par défaut", "Un serveur rapide compris", "Support technique rapide et efficace"],
+            ["Accès aux trois applications", "Deux utilisateurs par défaut", "Un serveur rapide compris", "Support technique rapide et efficace"],
+            ["Accès aux trois applications", "Aucune limite d'utilisateurs", "Le serveur le plus rapide" , "Ajout de fonctionnalité sans délai",  "Applications personnalisables"]
         ]
     }
 
@@ -32,16 +37,16 @@ const Pricing:React.FC = () => {
     // information de la askZone
     const askData = {
         titles : [
-            "Je ne me retrouve dans aucunes offres que proposez vous ?",
-            "J'ai un Samsung ça fonctionne quand même ?",
-            "J'ai vraiment besoin d'un tablette pour Devis ?",
-            "Sommes-nous prévenu à l'anniversaire des entretiens ?",
+            "Je ne me retrouve dans aucunes offres, que proposez vous ?",
+            "Proposez vous un prix dégressif sur le nombre d'utilisateur ?",
+            "Je ne suis intéréssé que par deux applications comment faire ?",
+            "Peut on personnaliser les applications ?",
         ],
         content : [
-            "C'est là que cela devient fantastique. Nos applications sauvegarderont toutes les données sur votre téléphone en attendant de retrouver du réseau, puis les enverront automatiquement sur le serveur.",
-            "Bien sur. Nos produits sont dotés d'une technologie puissante les rendants compatibles partout ! De Windows à Mac en passant par Android et iOS tout fonctionne.",
-            "Non la tablette n'est pas obligatoire, vous pouvez tout à fait dessiner au doigt ou bien vous passer de schéma. Celle-ci permettra de pousser l'application au mieux de ce qu'elle propose.",
-            "Malheureusement, Intervention n'offre pas encore de fonctionnalité permettant de prévenir le client ou vous-même qu'un entretien du matériel est nécessaire. Nous travaillons actuellement à développer cette fonctionnalité.",
+            "Contactez-nous et nous mettrons tout en œuvre pour trouver la meilleure solution à votre problème.",
+            "À partir d'un certain nombre d'utilisateurs, nous sommes disposés à proposer un tarif dégressif. Nous vous invitons à nous contacter afin que nous puissions étudier ensemble votre situation.",
+            "Malheureusement, les seules options disponibles à ce jour pour bénéficier de deux applications est de choisir la formule « Professional » ou « Premium ».",
+            "Bien sûr ! Avec la formule « Premium », vous pourrez tout à fait demander des ajouts de fonctionnalités ou un changement de design. Pour de très légères modifications sur les autres formules, n’hésitez pas à nous contacter.",
         ]
     }
 
@@ -54,7 +59,7 @@ const Pricing:React.FC = () => {
                 style="text-Primary"
             />
             <ViewText
-                text="Retrouvez ce dessous les question les plus posés sur notre offre mais en cas de doute n'hésitez pas à nous contacter."
+                text="Retrouvez ci dessous les question les plus posés sur notre offre mais en cas de doute n'hésitez pas à nous contacter."
                 style="text-Secondary"
             />
             <AskTemplate titles={askData.titles} content={askData.content}/>
@@ -73,7 +78,7 @@ const Pricing:React.FC = () => {
             text="Afin de nous adapter au mieux à vos besoins, nous avons mis au point 3 offres differentes. Vous n'avez plus qu'à faire votre choix !"
             style="text-Secondary"
         />
-        <OffreCard titles={cardData.titles} sousTitles={cardData.sousTitles} prices={cardData.prices} sousPrices={cardData.sousPrices}/>
+        <OffreCard titles={cardData.titles} sousTitles={cardData.sousTitles} prices={cardData.prices} sousPrices={cardData.sousPrices} checks={cardData.checks}/>
         <div className='h-20'/>
         {askZone()}
         <div className='h-40 max-md:h-20'/>

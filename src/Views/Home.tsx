@@ -45,7 +45,7 @@ const Home:React.FC = () => {
         titles : [
             "Et si je n'ai pas internet ?",
             "J'ai un Samsung ça fonctionne quand même ?",
-            "J'ai vraiment besoin d'un tablette pour Devis ?",
+            "J'ai vraiment besoin d'une tablette pour Devis ?",
             "Sommes-nous prévenu à l'anniversaire des entretiens ?",
             "Il est ou le chantier ?"
         ],
@@ -117,7 +117,7 @@ const Home:React.FC = () => {
                 style="text-Primary"
             />
             <ViewText
-                text="Retrouvez ce dessous les question les plus posés sur notre solution mais en cas de doute n'hésitez pas à nous contacter."
+                text="Retrouvez ci dessous les question les plus posés sur notre solution mais en cas de doute n'hésitez pas à nous contacter."
                 style="text-Secondary"
             />
             <AskTemplate titles={askData.titles} content={askData.content}/>
