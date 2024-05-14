@@ -71,7 +71,7 @@ const NavBar = () => {
         return (
         <Link className="flex items-center justify-center pl-[15%] max-md:pl-3" to={'/'}>
             <img src={isScrolled ? logo : whiteLogo} className="pr-1 h-9" alt="Logo" />
-            <h1 className={titleClass}>NewBat</h1>
+            <h2 className={titleClass}>NewBat</h2>
         </Link>
         );
     }
