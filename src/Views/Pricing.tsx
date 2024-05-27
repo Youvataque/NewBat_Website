@@ -17,8 +17,8 @@ const Pricing:React.FC = () => {
             "Créez l'environnement numérique idéal pour parfaire votre efficacité et améliorer votre confort."
         ],
         prices : [
-            "69€ / mois",
-            "149€ / mois",
+            "59€ / mois",
+            "139€ / mois",
             "Sur devis"
         ],
         sousPrices : [
@@ -45,7 +45,7 @@ const Pricing:React.FC = () => {
         content : [
             "Contactez-nous et nous mettrons tout en œuvre pour trouver la meilleure solution à votre problème.",
             "À partir d'un certain nombre d'utilisateurs, nous sommes disposés à proposer un tarif dégressif. Nous vous invitons à nous contacter afin que nous puissions étudier ensemble votre situation.",
-            "Malheureusement, les seules options disponibles à ce jour pour bénéficier de deux applications est de choisir la formule « Professional » ou « Premium ».",
+            "Vous pouvez actuellement opter pour la formule « Professional » ou « Premium » vous donnant accès aux 3 applications. Il n'y a cependant pas d'offre pour 2 applications seulement.",
             "Bien sûr ! Avec la formule « Premium », vous pourrez tout à fait demander des ajouts de fonctionnalités ou un changement de design. Pour de très légères modifications sur les autres formules, n’hésitez pas à nous contacter.",
         ]
     }
