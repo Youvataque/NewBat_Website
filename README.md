@@ -5,4 +5,4 @@ Avec cet outil robuste et accessible, n'importe quel salarié sera en mesure de 
 Le site internet est structuré en trois parties : l'accueil, qui présente le produit ; offre, qui expose les différentes tarifications ; et enfin, la section contact pour les informations de communication.
 # Technologies
 
-[![My Skills](https://skillicons.dev/icons?i=vscode,photoshop,typescript,react,next,tailwind,github,figma&perline=8)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=vscode,react,next,typescript,tailwind,github,photoshop,figma&perline=8)](https://skillicons.dev)
