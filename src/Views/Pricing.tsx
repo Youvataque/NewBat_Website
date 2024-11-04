@@ -17,13 +17,13 @@ const Pricing:React.FC = () => {
             "Créez l'environnement numérique idéal pour parfaire votre efficacité et améliorer votre confort."
         ],
         prices : [
-            "59€ / mois",
-            "139€ / mois",
+            "19€ / mois",
+            "49€ / mois",
             "Sur devis"
         ],
         sousPrices : [
-            "puis 20€ par utilisateur supplémentaire",
-            "puis 15€ par utilisateur supplémentaire",
+            "puis 10€ par utilisateur supplémentaire",
+            "puis 7€ par utilisateur supplémentaire",
             "Achat d'une licence comptant"
         ],
         checks : [
